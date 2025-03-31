@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #AEE2FF, #89CFF3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .contact {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Menu */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-family: "Playwrite HU", cursive;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Menu Mobile */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.mobile-menu {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    text-align: center;
+    display: none;
+}
+
+.mobile-link {
+    display: block;
+    padding: 12px;
+    color: #E3F2FD;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mobile-link:hover {
+    background: #E3F2FD;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+}
+/* Appliquer la police au titre*/
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Image arrondie et ombre douce */
+#about img {
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Adapter l'affichage sur mobile */
+@media (max-width: 768px) {
+    #about {
+        text-align: center;
+    }
+    #about img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Contact */
+#contact {
+    background-color: #E3F2FD; /* Couleur demandée */
+    color: #333; /* Couleur du texte pour un bon contraste */
+    padding: 4rem 0;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline-color: #3182CE;
+    border-color: #3182CE;
+}
+
+button[type="submit"] {
+    background-color: #3182CE;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #2B6CB0;
+}
+
+/* Bouton de téléchargement du CV */
+a.download-cv {
+    display: inline-block;
+    background-color: #E3F2FD;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+a.download-cv:hover {
+    background-color: #2B6CB0;
+}
+
+.name{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #AEE2FF;
+    font-size: 30px;
+}
+
+.presentation{
+    font-family: "Playwrite HU", cursive;
+}
+/* Styles des titres de section */
+.section-title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #aac3e0; /* Même couleur que les liens de la navbar */
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+/* Effet flou sur les images des projets */
+.project-image {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Image nette au survol */
+.project-card:hover .project-image {
+    filter: blur(0);
+}
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 5px;
+}
+
+.btn-details {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #3182CE;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #2B6CB0;
+}
